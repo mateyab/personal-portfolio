@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mateyab/personal-portfolio/static/css/main.c6849df4.css",
+    "main.js": "/mateyab/personal-portfolio/static/js/main.6b97abc7.js",
+    "static/js/453.2102b1ff.chunk.js": "/mateyab/personal-portfolio/static/js/453.2102b1ff.chunk.js",
+    "index.html": "/mateyab/personal-portfolio/index.html",
+    "main.c6849df4.css.map": "/mateyab/personal-portfolio/static/css/main.c6849df4.css.map",
+    "main.6b97abc7.js.map": "/mateyab/personal-portfolio/static/js/main.6b97abc7.js.map",
+    "453.2102b1ff.chunk.js.map": "/mateyab/personal-portfolio/static/js/453.2102b1ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6849df4.css",
+    "static/js/main.6b97abc7.js"
+  ]
+}
