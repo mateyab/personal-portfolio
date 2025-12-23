@@ -4,45 +4,29 @@ import "../Projects.css";
 const Projects = () => {
   const projects = [
     {
-      name: "Personal Portfolio",
-      description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
-      tech: "React, CSS, React Router",
+      name: "Electric Vehicle Charging Station Simulation", 
+      description: `This simulation evaluates how different vehicle routing policies affect the total
+                    time drivers spend charging their vehicles. Vehicles arrive according to a Poisson
+                    process and are routed to stations modeled as two-server, single-queue systems.
+                    The study compares a shortest-distance-first routing policy with a
+                    shortest-estimated-wait policy to assess their impact on overall charging time,
+                    accounting for queueing, charger availability, and balking behavior.`,
+      tech: "Python",
       image: `${process.env.PUBLIC_URL}/simulation.png`,
-      link: "https://github.com/yourusername/portfolio"
+      link: "https://github.com/mateyab/EV_simulation"
     },
      {
-      name: "Personal Portfolio",
+      name: "The Pulse of Morris Park",
       description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
       tech: "React, CSS, React Router",
       image: `${process.env.PUBLIC_URL}/fence.png`,
-      link: "https://github.com/yourusername/portfolio"
+      link: "https://limbicmedia.ca/projects/morris-park-large-scale-custom-piece/"
     },
      {
-      name: "Personal Portfolio",
+      name: "VIMEA Digital Collaboration Platform",
       description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
       tech: "React, CSS, React Router",
-      image: `${process.env.PUBLIC_URL}/simulation.png`,
-      link: "https://github.com/yourusername/portfolio"
-    },
-     {
-      name: "Personal Portfolio",
-      description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
-      tech: "React, CSS, React Router",
-      image: `${process.env.PUBLIC_URL}/fence.png`,
-      link: "https://github.com/yourusername/portfolio"
-    },
-     {
-      name: "Personal Portfolio",
-      description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
-      tech: "React, CSS, React Router",
-      image: `${process.env.PUBLIC_URL}/simulation.png`,
-      link: "https://github.com/yourusername/portfolio"
-    },
-     {
-      name: "Personal Portfolio",
-      description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
-      tech: "React, CSS, React Router",
-      image: `${process.env.PUBLIC_URL}/fence.png`,
+      image: `${process.env.PUBLIC_URL}/VIMEA.jpg`,
       link: "https://github.com/yourusername/portfolio"
     },
  
@@ -71,7 +55,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="project-link"
                 >
-                  View on GitHub →
+                  View project →
                 </a>
               )}
             </div>
