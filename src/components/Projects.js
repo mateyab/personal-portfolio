@@ -15,21 +15,43 @@ const Projects = () => {
       image: `${process.env.PUBLIC_URL}/simulation.png`,
       link: "https://github.com/mateyab/EV_simulation"
     },
-     {
-      name: "The Pulse of Morris Park",
-      description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
-      tech: "React, CSS, React Router",
-      image: `${process.env.PUBLIC_URL}/fence.png`,
-      link: "https://limbicmedia.ca/projects/morris-park-large-scale-custom-piece/"
+    {
+    name: "VIMEA Digital Collaboration Platform",
+    description: "Wokred with a team of 6 to develop the requirments and prototype for the Vancouver Island Manufacturing excellence alliance (VIMEA) digital collaboration platform. " +
+    "We created a complete SRS documents and met with our mentors at VIMEA to ensure our design met their needs " +
+    "Utilized usecase diagrams, sequence diagrams,ERDs and created UI prototype in typescript.",
+    tech: "UML, Typescript, Microsoft Word",
+    image: `${process.env.PUBLIC_URL}/VIMEA.jpg`,
+    link: "https://www.linkedin.com/groups/14626793/"
     },
-     {
-      name: "VIMEA Digital Collaboration Platform",
-      description: "Personal portfolio website built to showcase projects and experience.dbdfgbdbd dvdsvdvdvdvdvdvdfvdvdvdvdfbgfnddfnfb",
-      tech: "React, CSS, React Router",
-      image: `${process.env.PUBLIC_URL}/VIMEA.jpg`,
-      link: "https://github.com/yourusername/portfolio"
+    {
+        name: "The Pulse of Morris Park",
+        description: `Created a Python program that assigned x,y coordinates to light pixels in a specific pattern,
+        allowing a lighting controller to generate visuals across all the pixels. The lighting controller displays a
+        variety of patterns across a heart shape design. I also prototyped the design using Capture Software. I had the opportunity
+        to work on this project as part of my co-op term at Limbic Media.`,
+        tech: (
+          <><span>Python, <a href="https://www.capture.se/">Capture</a></span></>
+        ),
+        image: `${process.env.PUBLIC_URL}/fence.png`,
+        link: "https://limbicmedia.ca/projects/morris-park-large-scale-custom-piece/"
+    },
+    {
+    name: "Syéxw Chó:leqw Adventure Park Night Walk", 
+    description: `
+    Developed a Raspberry Pi application to read audio files from a USB drive and play them sequentially in a continuous loop for the exhibit.
+    Troubleshot issues like hidden files on the USB drive and researched methods for achieving high-quality audio playback.
+    This led to the installation of VLC media player on the Raspberry Pi for clear audio. I had the opportunity
+        to work on this project as part of my co-op term at Limbic Media.
+
+    I also helped with making some of the spirals showcased in the exhibit.`,
+    tech: "Rasperry Pi, Python, VLC Media Player",
+    image: `${process.env.PUBLIC_URL}/adventure_park.jpg`,
+    link: "https://limbicmedia.ca/projects/syexw-choleqw-adventure-park-night-walk/"
     },
  
+
+    
   ];
 
   return (
