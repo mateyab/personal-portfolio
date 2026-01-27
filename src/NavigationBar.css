@@ -31,7 +31,39 @@
   color: #2563eb !important;
 }
 
-/* Active link (optional, visual cue) */
 .nav-links .nav-link.active {
   color: #2563eb !important;
+}
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row;
+}
+.nav-social svg {
+  display: block;
+}
+.social-icon {
+  font-size: 1.5rem;
+  color: #111827;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+.social-inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-email {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  text-decoration: none;
+  color: #111827;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
