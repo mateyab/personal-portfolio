@@ -12,8 +12,7 @@ const Home = () => {
           <p className="blurb">
             I am a Software Engineering student at the University of Victoria
             with a specialization in data analysis and artificial intelligence.
-            <br></br>
-            <br></br>
+            <br /><br />
             See my projects and experience to learn more about me!
           </p>
         </div>
@@ -21,7 +20,7 @@ const Home = () => {
         <div className="home-image">
           <img
             src={`${process.env.PUBLIC_URL}/profile.jpg`}
-            alt="Profile"
+            alt="Mateya Berezowsky"
             className="profile-pic"
           />
         </div>

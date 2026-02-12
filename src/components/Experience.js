@@ -10,9 +10,7 @@ const Experience = () => {
       website: "https://www.uvic.ca/",
       details: [
         "Pursuing a Bachelor of Software Engineering with a specialization in Data Analysis and Artificial Intelligence.",
-        "Relevant coursework: Data Structures and Algorithms, Database Systems, Software Design and Architecture, Data Analysis and Pattern Recognition, " +
-        "Practice of Information Security and Privacy, Simulations in Operations Research."
-
+        "Relevant coursework: Data Structures and Algorithms, Database Systems, Software Design and Architecture, Data Analysis and Pattern Recognition, Practice of Information Security and Privacy, and Simulations in Operations Research."
       ]
     },
     {
@@ -42,24 +40,22 @@ const Experience = () => {
       ]
     },
     {
-  company: "Limbic Media",
-  location: "Victoria, BC",
-  role: "Project Support and Testing Co-op",
-  website: "https://limbicmedia.ca/",
-  details: [
-   
+      company: "Limbic Media",
+      location: "Victoria, BC",
+      role: "Project Support and Testing Co-op",
+      website: "https://limbicmedia.ca/",
+      details: [
         "Supported the development of MaestroDMX, an autonomous lighting controller for DMX-based lighting systems.",
         "Led a project to automate fixture profile creation by developing Python scripts to parse manufacturer manuals and generate standardized JSON configuration files defining channel controls and light functions.",
         "Developed Python tooling to streamline MaestroDMX production, including barcode generation for individual units, fixture library validation, and production automation scripts.",
         "Programmed a Raspberry Pi to flash firmware onto MaestroDMX PCBs during MVP production, enabling reliable and repeatable device setup."
-  ]
-}
+      ]
+    }
   ];
 
   return (
     <div className="experience">
       <div className="experience-container">
-
         {experiences.map((exp, index) => (
           <div className="experience-item" key={index}>
             <div className="experience-header">

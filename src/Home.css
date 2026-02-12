@@ -1,5 +1,6 @@
 .home {
-  height: calc(100vh - 60px);
+  /* Use min-height so content can grow on small screens */
+  min-height: calc(100vh - 80px); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 2rem;
   max-width: 1000px;
   width: 100%;
 }
@@ -21,21 +22,20 @@
 }
 
 .name {
-  font-size: 2.75rem;
+  font-size: clamp(2rem, 5vw, 2.75rem); /* Scales font based on screen size */
   font-weight: 700;
   color: #111827;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
   font-size: 1.3rem;
   font-weight: 500;
-  color: #4b5563;
   margin-bottom: 1.5rem;
 }
 
 .blurb {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   color: #374151;
   max-width: 500px;
@@ -48,9 +48,34 @@
 }
 
 .profile-pic {
-  width: 220px;
+  width: 280px; /* Slightly larger for desktop */
+  max-width: 80%; /* Ensures it doesn't overflow on tiny screens */
   height: auto;
-  border-radius: 10%;
+  border-radius: 20px;
   object-fit: cover;
-  border: 3px solid #e5e7eb;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Adds a modern lift */
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column-reverse; /* Put image on top, text below */
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .home {
+    padding-top: 4rem; /* Add space for the sticky navbar */
+    height: auto; 
+  }
+
+  .blurb {
+    margin: 0 auto; /* Center the text block */
+  }
+
+  .profile-pic {
+    width: 200px; /* Smaller image on mobile */
+  }
 }

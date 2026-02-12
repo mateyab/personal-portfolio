@@ -4,19 +4,22 @@
   padding: 0.75rem 0;
 }
 
+/* Base Nav Links */
 .nav-links .nav-link {
   font-size: 1.1rem;
   font-weight: 500;
   color: #111827 !important;
   margin-left: 1.5rem;
   position: relative;
+  transition: color 0.2s ease;
 }
 
+/* Hover Underline Animation */
 .nav-links .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -2px;
   width: 0%;
   height: 2px;
   background-color: #2563eb;
@@ -27,43 +30,49 @@
   width: 100%;
 }
 
-.nav-links .nav-link:hover {
-  color: #2563eb !important;
-}
-
+.nav-links .nav-link:hover, 
 .nav-links .nav-link.active {
   color: #2563eb !important;
 }
+
+/* Social Icons Container */
 .nav-social {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex-direction: row;
-}
-.nav-social svg {
-  display: block;
-}
-.social-icon {
-  font-size: 1.5rem;
-  color: #111827;
-  transition: color 0.2s ease, transform 0.2s ease;
+  gap: 1.25rem;
 }
 
-.social-icon:hover {
+.social-icon, .social-email {
+  color: #111827;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.social-icon:hover, .social-email:hover {
   color: #2563eb;
   transform: translateY(-2px);
 }
-.social-inline {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 
-.social-email {
-  display: flex;
-  align-items: center;
-  gap: .4rem;
-  text-decoration: none;
-  color: #111827;
-  transition: color 0.2s ease, transform 0.2s ease;
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .nav-links .nav-link {
+    margin-left: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .nav-links .nav-link::after {
+    display: none; /* Remove underline on mobile for a cleaner list */
+  }
+
+  /* Hide email text on mobile to save space, keep the icon */
+  .social-email span {
+    display: none;
+  }
+  
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
 }

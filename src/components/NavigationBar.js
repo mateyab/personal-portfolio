@@ -1,12 +1,16 @@
+import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "../NavigationBar.css";
 
 const NavigationBar = () => {
+  const location = useLocation();
+
   return (
-    <Navbar expand="lg" sticky="top" className="custom-navbar">
+    <Navbar collapseOnSelect expand="lg" sticky="top" className="custom-navbar">
       <Container>
+        {/* Left Side: Socials */}
         <div className="nav-social">
           <a
             href="https://github.com/mateyab"
@@ -15,7 +19,7 @@ const NavigationBar = () => {
             className="social-icon"
             aria-label="GitHub"
           >
-            <FaGithub size={24} />
+            <FaGithub size={22} />
           </a>
 
           <a
@@ -25,26 +29,46 @@ const NavigationBar = () => {
             className="social-icon"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={22} />
           </a>
+
           <a
             href="mailto:mateyaberezowsky@gmail.com"
             className="social-email"
             aria-label="Email"
           >
-            <FaEnvelope size={24} />
-            <span>mateyaberezowsky@gmail.com</span>
+            <FaEnvelope size={22} />
+            <span className="ms-2 d-none d-lg-inline">mateyaberezowsky@gmail.com</span>
           </a>
-          
         </div>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/* Mobile Toggle */}
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
-        <Navbar.Collapse id="basic-navbar-nav">
+        {/* Right Side: Links */}
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto nav-links">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/experience">Experience</Nav.Link>
-            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/" 
+              active={location.pathname === "/"}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/experience" 
+              active={location.pathname === "/experience"}
+            >
+              Experience
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/projects" 
+              active={location.pathname === "/projects"}
+            >
+              Projects
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
