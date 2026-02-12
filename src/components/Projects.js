@@ -6,10 +6,10 @@ const ProjectImage = ({ src, alt }) => {
 
   return (
     <div className="image-wrapper">
-      {!loaded && <div className="image-placeholder">Loading...</div>}
       <img
         src={src}
         alt={alt}
+        loading="eager"
         className={`project-image ${loaded ? "loaded" : "hidden"}`}
         onLoad={() => setLoaded(true)}
       />
@@ -71,7 +71,6 @@ const Projects = () => {
       <div className="projects-container">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
-            {/* Using the sub-component for loading logic */}
             <ProjectImage src={project.image} alt={project.name} />
 
             <div className="project-content">
