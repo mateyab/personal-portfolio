@@ -10,8 +10,7 @@ const Home = () => {
           <h3 className="subtitle">Software Engineering Student</h3>
 
           <p className="blurb">
-            I am a Software Engineering student at the University of Victoria
-            with a specialization in data analysis and artificial intelligence.
+            I am a Software Engineering student at the University of Victoria.
             <br /><br />
             See my projects and experience to learn more about me!
           </p>
