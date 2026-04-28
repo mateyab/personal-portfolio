@@ -20,6 +20,13 @@ const ProjectImage = ({ src, alt }) => {
 const Projects = () => {
   const projects = [
     {
+      name: "Real-Time Traffic Light Control Simulation", 
+      description: `Add information about report, 2 pdfs for both project reports`,
+      tech: "C, FreeRTOS, STM32F407 Discovery Board",
+      image: `${process.env.PUBLIC_URL}/trafficlight.jpeg`,
+      link: "https://github.com/mateyab/EV_simulation"
+    },
+    {
       name: "Electric Vehicle Charging Station Simulation", 
       description: `This simulation evaluates how different vehicle routing policies affect the total
                     time drivers spend charging their vehicles. Vehicles arrive according to a Poisson

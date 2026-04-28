@@ -14,6 +14,15 @@ const Experience = () => {
       ]
     },
     {
+      company: "University of Victoria",
+      location: "Victoria, BC",
+      role: "Teaching Assistant for Software Testing",
+      website: "https://www.ece.uvic.ca/~ardeshir/",
+      details: [
+        "Prepared assignments and graded student exams, assignments, and projects. ",
+      ]
+    },
+    {
       company: "Clio",
       location: "Vancouver, BC",
       role: "Software Developer Co-op",
