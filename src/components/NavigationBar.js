@@ -64,6 +64,13 @@ const NavigationBar = () => {
             </Nav.Link>
             <Nav.Link 
               as={Link} 
+              to="/education" 
+              active={location.pathname === "/education"}
+            >
+              Education
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
               to="/projects" 
               active={location.pathname === "/projects"}
             >

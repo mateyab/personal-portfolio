@@ -18,7 +18,7 @@ const Home = () => {
 
         <div className="home-image">
           <img
-            src={`${process.env.PUBLIC_URL}/profile.jpg`}
+            src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
             alt="Mateya Berezowsky"
             loading="eager"
             className="profile-pic"

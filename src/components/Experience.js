@@ -6,20 +6,10 @@ const Experience = () => {
     {
       company: "University of Victoria",
       location: "Victoria, BC",
-      role: "Software Engineering Student",
-      website: "https://www.uvic.ca/",
-      details: [
-        "Pursuing a Bachelor of Software Engineering with a specialization in Data Analysis and Artificial Intelligence.",
-        "Relevant coursework: Data Structures and Algorithms, Database Systems, Software Design and Architecture, Data Analysis and Pattern Recognition, Practice of Information Security and Privacy, and Simulations in Operations Research."
-      ]
-    },
-    {
-      company: "University of Victoria",
-      location: "Victoria, BC",
       role: "Teaching Assistant for Software Testing",
       website: "https://www.ece.uvic.ca/~ardeshir/",
       details: [
-        "Prepared assignments and graded student exams, assignments, and projects. ",
+        "Prepared Final project, graded exams, projects, and labs. ",
       ]
     },
     {
@@ -59,7 +49,7 @@ const Experience = () => {
         "Developed Python tooling to streamline MaestroDMX production, including barcode generation for individual units, fixture library validation, and production automation scripts.",
         "Programmed a Raspberry Pi to flash firmware onto MaestroDMX PCBs during MVP production, enabling reliable and repeatable device setup."
       ]
-    }
+    },
   ];
 
   return (

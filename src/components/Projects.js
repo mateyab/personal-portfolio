@@ -1,7 +1,7 @@
 import "../Projects.css";
 import React, { useState } from "react";
 
-const ProjectImage = ({ src, alt }) => {
+const ProjectImage = ({ src, alt, eager }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -9,7 +9,8 @@ const ProjectImage = ({ src, alt }) => {
       <img
         src={src}
         alt={alt}
-        loading="eager"
+        loading={eager ? "eager" : "lazy"}
+        decoding="async"
         className={`project-image ${loaded ? "loaded" : "hidden"}`}
         onLoad={() => setLoaded(true)}
       />
@@ -23,7 +24,7 @@ const Projects = () => {
       name: "Real-Time Traffic Light Control Simulation", 
       description: `Add information about report, 2 pdfs for both project reports`,
       tech: "C, FreeRTOS, STM32F407 Discovery Board",
-      image: `${process.env.PUBLIC_URL}/trafficlight.jpeg`,
+      image: `${process.env.PUBLIC_URL}/images/trafficlight.jpg`,
       link: "https://github.com/mateyab/EV_simulation"
     },
     {
@@ -35,7 +36,7 @@ const Projects = () => {
                     shortest-estimated-wait policy to assess their impact on overall charging time,
                     accounting for queueing, charger availability, and balking behavior.`,
       tech: "Python",
-      image: `${process.env.PUBLIC_URL}/simulation.png`,
+      image: `${process.env.PUBLIC_URL}/images/simulation.png`,
       link: "https://github.com/mateyab/EV_simulation"
     },
     {
@@ -44,7 +45,7 @@ const Projects = () => {
       "We created complete SRS documents and met with our mentors at VIMEA to ensure our design met their needs. " + 
       "Utilized use case diagrams, sequence diagrams, and ERDs, and created a prototype.",
       tech: "UML, TypeScript, Microsoft Word",
-      image: `${process.env.PUBLIC_URL}/VIMEA.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/VIMEA.jpg`,
       link: "https://www.linkedin.com/groups/14626793/"
     },
     {
@@ -56,7 +57,7 @@ const Projects = () => {
         tech: (
           <><span>Python, <a href="https://www.capture.se/">Capture</a></span></>
         ),
-        image: `${process.env.PUBLIC_URL}/fence.png`,
+        image: `${process.env.PUBLIC_URL}/images/fence.jpg`,
         link: "https://limbicmedia.ca/projects/morris-park-large-scale-custom-piece/"
     },
     {
@@ -68,7 +69,7 @@ const Projects = () => {
 
       I also assisted in creating some of the spirals showcased in the exhibit.`,
       tech: "Raspberry Pi, Python, VLC Media Player",
-      image: `${process.env.PUBLIC_URL}/adventure_park.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/adventure_park.jpg`,
       link: "https://limbicmedia.ca/projects/syexw-choleqw-adventure-park-night-walk/"
     },
   ];
@@ -78,7 +79,7 @@ const Projects = () => {
       <div className="projects-container">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
-            <ProjectImage src={project.image} alt={project.name} />
+            <ProjectImage src={project.image} alt={project.name} eager={index < 3} />
 
             <div className="project-content">
               <h2 className="project-title">{project.name}</h2>
