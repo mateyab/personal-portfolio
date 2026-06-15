@@ -25,7 +25,8 @@ const Projects = () => {
       description: `Add information about report, 2 pdfs for both project reports`,
       tech: "C, FreeRTOS, STM32F407 Discovery Board",
       image: `${process.env.PUBLIC_URL}/images/trafficlight.jpg`,
-      link: "https://github.com/mateyab/EV_simulation"
+      link: `${process.env.PUBLIC_URL}/trafficReport.pdf`,
+      linkLabel: "View report"
     },
     {
       name: "Electric Vehicle Charging Station Simulation", 
@@ -87,7 +88,7 @@ const Projects = () => {
               <p className="project-tech">{project.tech}</p>
               {project.link && (
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                  View project →
+                  {project.linkLabel || "View project"} →
                 </a>
               )}
             </div>
