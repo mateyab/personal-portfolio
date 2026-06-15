@@ -9,7 +9,7 @@ const Experience = () => {
       role: "Teaching Assistant for Software Testing",
       website: "https://www.ece.uvic.ca/~ardeshir/",
       details: [
-        "Prepared Final project, graded exams, projects, and labs. ",
+        "Prepared final project, graded exams, projects, and labs. ",
       ]
     },
     {

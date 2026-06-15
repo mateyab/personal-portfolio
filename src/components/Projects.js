@@ -22,7 +22,11 @@ const Projects = () => {
   const projects = [
     {
       name: "Real-Time Traffic Light Control Simulation", 
-      description: `Add information about report, 2 pdfs for both project reports`,
+      description: `Developed a real-time embedded traffic simulation on STM32F4 in C using FreeRTOS,
+                    featuring simulated vehicles responding to traffic signals, stopping at
+                    red, clearing at yellow, and proceeding at green. Signal timing and vehicle spawn
+                    rates are driven by potentiometer input via ADC, with inter-task communication
+                    through message queues and shift-register-controlled LED output.`,
       tech: "C, FreeRTOS, STM32F407 Discovery Board",
       image: `${process.env.PUBLIC_URL}/images/trafficlight.jpg`,
       link: `${process.env.PUBLIC_URL}/trafficReport.pdf`,
